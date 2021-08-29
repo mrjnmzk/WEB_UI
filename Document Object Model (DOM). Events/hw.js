@@ -1,19 +1,17 @@
 /task1/
 
-let listElems = document.querySelector("#list");
-let elemFirst = listElems.firstElementChild;
-let elemLast = listElems.lastElementChild;
-let elem2 = elemFirst.nextElementSibling;
-let elem3 = elem2.nextElementSibling;
-let elem4 = elemLast.previousElementSibling;
-
-console.log(elemFirst.innerHTML, elemLast.innerHTML, elem2.innerHTML, elem4.innerHTML, elem3.innerHTML);
-
-alert(elemFirst.innerHTML);
-alert(elemLast.innerHTML);
-alert(elem2.innerHTML);
-alert(elem4.innerHTML);
-alert(elem3.innerHTML);
+const list = document.querySelectorAll("#list li");
+    alert(list[0].innerHTML);
+    alert(list[4].innerHTML);
+    alert(list[1].innerHTML);
+    alert(list[3].innerHTML);
+    alert(list[2].innerHTML);
+   
+    console.log(document.getElementById("list").firstElementChild.innerHTML);
+    console.log(document.getElementById("list").lastElementChild.innerHTML);
+    console.log(document.getElementById("list").firstElementChild.nextElementSibling.innerHTML);
+    console.log(document.getElementById("list").lastElementChild.previousElementSibling.innerHTML);
+    console.log(document.getElementById("list").lastElementChild.previousElementSibling.previousElementSibling.innerHTML);
 
 /task2/
 
@@ -32,8 +30,8 @@ p3.style.textDecoration = "underline";
 let p4 = document.getElementsByTagName("p")[3];
 p4.style.fontStyle = "italic";
 
-let list = document.getElementById("myList");
-let listElem = list.children;
+let lists = document.getElementById("myList");
+let listElem = lists.children;
 for (let i = 0; i < listElem.length; i++) {
     listElem[i].style.display = "inline"
 }
